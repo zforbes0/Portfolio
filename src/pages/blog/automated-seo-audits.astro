@@ -3,6 +3,12 @@ import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
+// Image imports
+import technicalSeoAuditInterface from '../../assets/seo-services/technical-seo-audit-interface_v3.png';
+import seoAutomationWorkflow from '../../assets/seo-services/seo-automation-workflow.png';
+import aiSeoAnalysisTools from '../../assets/seo-services/ai-seo-analysis-tools.png';
+import seoPerformanceDashboard from '../../assets/seo-services/seo-performance-monitoring-dashboard.png';
+
 
 const meta = {
   title: "Automated SEO Audits: 50% Time Reduction & Comprehensive AI Analysis | Zachary Forbes Portfolio",
@@ -157,7 +163,7 @@ const meta = {
       <Image
           width={800}
           height={400}
-        src="/src/assets/seo-services/technical-seo-audit-interface_v3.png"
+        src={technicalSeoAuditInterface}
         alt="Professional automated SEO audit dashboard showing comprehensive analysis metrics and performance indicators"
         class="w-full h-64 object-cover rounded-xl"
       />
@@ -223,7 +229,7 @@ const meta = {
               <Image
           width={800}
           height={400}
-                src="/src/assets/seo-services/seo-automation-workflow.png"
+                src={seoAutomationWorkflow}
                 alt="AI-powered SEO automation workflow diagram demonstrating time-saving analysis process"
                 class="w-48 h-32 aspect-[3/2] object-cover rounded-lg"
               />
@@ -260,7 +266,7 @@ const meta = {
                 <Image
           width={800}
           height={400}
-                  src="/src/assets/seo-services/ai-seo-analysis-tools.png"
+                  src={aiSeoAnalysisTools}
                   alt="Advanced AI SEO analysis tools interface showing comprehensive technical audit capabilities"
                   class="w-48 h-32 aspect-[3/2] object-cover rounded-lg"
                 />
@@ -410,7 +416,7 @@ const meta = {
               <Image
           width={800}
           height={400}
-                src="/src/assets/seo-services/seo-performance-monitoring-dashboard.png"
+                src={seoPerformanceDashboard}
                 alt="Advanced SEO performance monitoring dashboard displaying real-time metrics and audit insights"
                 class="w-48 h-32 aspect-[3/2] object-cover rounded-lg"
               />
