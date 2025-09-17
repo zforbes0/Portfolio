@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import { Analytics } from '@vercel/analytics/astro';
 
 export interface Props {
   title: string;
@@ -27,6 +28,7 @@ const { title, description = "Personal Portfolio - Paid Media & SEO Marketing Sp
 </head>
 <body class="text-white font-inter antialiased overflow-x-hidden" style="background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/assets/Matrix Background.png'); background-size: cover; background-position: center; background-attachment: fixed;">
   <slot />
+  <Analytics />
 </body>
 </html>
 
