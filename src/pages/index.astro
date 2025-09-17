@@ -1,0 +1,564 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const adCreatives = [
+  {
+    id: 1,
+    title: "DARC Sport Athletic Wear Campaign",
+    category: "Video Creatives",
+    description: "High-energy video advertisement of an athletic wear brand featuring dynamic visuals, lifestyle positioning, and strong brand messaging.",
+    type: "video",
+    media: "/assets/DARCSPORTFINALAD.mp4",
+    technologies: ["Video Production", "Motion Graphics", "Brand Storytelling", "Clothing Brand Advertising"],
+    metrics: "Athletic Wear Campaign"
+  },
+  {
+    id: 2,
+    title: "Pricklee Cactus Water Product Launch",
+    category: "Video Creatives",
+    description: "Product-focused video advertisement showcasing unique selling propositions, health benefits, and lifestyle integration for innovative cactus water beverage targeting health-conscious consumers.",
+    type: "video",
+    media: "/assets/Pricklee Cactus Water.mp4",
+    technologies: ["Product Video", "Health & Wellness Marketing", "Lifestyle Positioning", "Beverage Advertising"],
+    metrics: "Health Beverage Campaign"
+  },
+  {
+    id: 3,
+    title: "Vermont Maple Syrup Artisan Brand",
+    category: "Video Creatives",
+    description: "Artisanal food product video emphasizing quality, authenticity, and local sourcing with compelling visual storytelling designed to build brand trust and drive purchase intent.",
+    type: "video",
+    media: "/assets/Vermont Maple Syrup.mp4",
+    technologies: ["Food & Beverage Marketing", "Artisan Branding", "Quality Positioning", "Food Advertising"],
+    metrics: "Artisan Food Campaign"
+  },
+  {
+    id: 4,
+    title: "Figlia Aperitif Lifestyle Campaign",
+    category: "Video Creatives",
+    description: "Sophisticated lifestyle video advertisement of a premium aperitivo brand focusing on product presentation and aspirational positioning for target demographic.",
+    type: "video",
+    media: "/assets/FIglia Ad.mp4",
+    technologies: ["Lifestyle Marketing", "Premium Positioning", "Social Moments", "Beverage Advertising"],
+    metrics: "Premium Aperitif Campaign"
+  },
+  {
+    id: 5,
+    title: "Benevolence Candle Collection",
+    category: "Static Creatives",
+    description: "Elegant static advertisement for luxury candle brand featuring premium product photography, sophisticated typography, and lifestyle positioning to appeal to affluent consumers seeking home luxury items.",
+    type: "image",
+    media: "/assets/Benevolence.jpeg",
+    technologies: ["Product Photography", "Luxury Branding", "Print Design", "Home Goods Advertising"],
+    metrics: "Luxury Candle Campaign"
+  },
+  {
+    id: 6,
+    title: "Explore Louisiana Tourism Campaign",
+    category: "Static Creatives",
+    description: "Tourism-focused static advertisement showcasing Louisiana's unique culture, attractions, and experiences with compelling visuals and messaging designed to drive visit intent and tourism revenue.",
+    type: "image",
+    media: "/assets/Explore Louisiana.jpeg",
+    technologies: ["Tourism Marketing", "Destination Branding", "Cultural Positioning", "Travel Advertising"],
+    metrics: "Tourism Campaign"
+  },
+  {
+    id: 7,
+    title: "Berry's Raspberry Sorbet Artisan Desserts",
+    category: "Static Creatives",
+    description: "Premium dessert brand advertisement featuring artisanal product photography, elegant typography, and sophisticated color palette designed to appeal to discerning consumers seeking high-quality frozen desserts.",
+    type: "image",
+    media: "/assets/Berry's Raspberry Sorbet.jpeg",
+    technologies: ["Product Photography", "Food & Beverage Marketing", "Premium Positioning", "Food Advertising"],
+    metrics: "Artisan Dessert Campaign"
+  },
+  {
+    id: 8,
+    title: "Outdoor Hiking Boots Lifestyle Campaign",
+    category: "Static Creatives",
+    description: "Outdoor gear advertisement emphasizing durability, performance, and adventure lifestyle positioning with clean product presentation and action-oriented messaging targeting outdoor enthusiasts.",
+    type: "image",
+    media: "/assets/hiking-boots-clean.png",
+    technologies: ["Product Photography", "Outdoor Marketing", "Lifestyle Positioning", "Apparel/Accessory Advertising"],
+    metrics: "Outdoor Gear Campaign"
+  },
+  {
+    id: 9,
+    title: "Youth to the People Skin Care Campaign",
+    category: "Static Creatives",
+    description: "Premium skincare brand advertisement featuring clean, minimalist design with focus on natural ingredients and sustainable beauty positioning targeted at health-conscious consumers.",
+    type: "image",
+    media: "/assets/Youth to the People.png",
+    technologies: ["Product Photography", "Skincare Marketing", "Clean Beauty Positioning", "Skin Care Advertising"],
+    metrics: "Skin Care Advertising"
+  }
+];
+
+const copywritingPortfolio = [
+  {
+    id: 1,
+    title: "SEO Optimization Services: Complete SEO Strategy Guide",
+    category: "Pillar Page Content",
+    description: "Comprehensive 2,400-word pillar page covering complete SEO strategy including technical optimization, content strategy, and performance measurement. Features data-driven insights and actionable implementation frameworks.",
+    type: "article",
+    url: "/blog/seo-optimization-services",
+    technologies: ["SEO Strategy", "Technical Writing", "Content Marketing", "Data Analysis"],
+    metrics: "2,300+ words, 5 supporting articles",
+    wordCount: "2,300+ words"
+  },
+  {
+    id: 2,
+    title: "Automated SEO Audits: AI-Powered Analysis",
+    category: "Technical SEO Content",
+    description: "In-depth technical article examining AI-driven SEO audit processes, automation workflows, and performance optimization strategies that reduce manual audit time by 50% while improving accuracy.",
+    type: "article",
+    url: "/blog/automated-seo-audits",
+    technologies: ["Technical SEO", "AI Automation", "Process Optimization", "Data Analysis"],
+    metrics: "1,300+ words",
+    wordCount: "1,300+ words"
+  },
+  {
+    id: 3,
+    title: "Local SEO Services: Geographic Targeting Strategy",
+    category: "Local SEO Content",
+    description: "Strategic guide to local SEO implementation covering geographic targeting, local search optimization, and service area expansion strategies for increased visibility in target markets.",
+    type: "article",
+    url: "/blog/local-seo-services",
+    technologies: ["Local SEO", "Geographic Marketing", "Business Strategy", "Market Analysis"],
+    metrics: "1000+ words",
+    wordCount: "1000+ words"
+  },
+  {
+    id: 4,
+    title: "Technical SEO Audit Services: Advanced Diagnostics",
+    category: "Technical SEO Content",
+    description: "Advanced technical SEO analysis covering crawl optimization, site architecture evaluation, and performance diagnostics. Detailed methodology for identifying and resolving critical ranking issues.",
+    type: "article",
+    url: "/blog/technical-seo-audit-services",
+    technologies: ["Technical SEO", "Site Auditing", "Performance Analysis", "Problem Solving"],
+    metrics: "1,100+ words",
+    wordCount: "1,100+ words"
+  },
+  {
+    id: 5,
+    title: "SEO-Friendly Website Design: Foundation Strategies",
+    category: "Design & SEO Content",
+    description: "Strategic approach to SEO-optimized website design covering architecture planning, user experience optimization, and technical implementation for maximum search visibility from launch.",
+    type: "article",
+    url: "/blog/seo-friendly-website-design",
+    technologies: ["Website Design", "SEO Strategy", "UX Optimization", "Technical Planning"],
+    metrics: "1,200+ words",
+    wordCount: "1,200+ words"
+  },
+  {
+    id: 6,
+    title: "Automation-Ready Websites & Customer Experience",
+    category: "CX & SEO Content",
+    description: "Comprehensive analysis of automation integration in web design, customer experience optimization, and SEO performance enhancement through intelligent website automation strategies.",
+    type: "article",
+    url: "/blog/automation-ready-websites-customer-experience",
+    technologies: ["Marketing Automation", "Customer Experience", "SEO Integration", "Strategic Planning"],
+    metrics: "1,300+ words",
+    wordCount: "1,300+ words"
+  }
+];
+---
+
+<Layout title="Zachary Forbes - Paid Media & SEO Marketing Specialist Portfolio">
+
+  <main class="relative z-10">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-12">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="animate-slide-up">
+          <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow uppercase">
+            Paid Media & SEO Marketing Specialist
+          </p>
+          <div class="mb-6">
+            <img
+              src="/assets/ZF Portfolio Header.png"
+              alt="Zachary Forbes"
+              class="mx-auto max-w-md md:max-w-5xl h-auto"
+            />
+          </div>
+          <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Driving measurable growth through strategic paid media campaigns, SEO optimization,
+            and conversion-focused marketing strategies. Specializing in performance marketing,
+            rapid creative iteration, data-driven decision making/copywriting, and ROI-focused campaigns that scale businesses.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#portfolio" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block">
+              View Ad Creative/Copywriting
+            </a>
+            <a href="#contact" class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary hover:text-black transition-all duration-300 inline-block">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 animate-slide-up">
+          <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-white mb-8">
+            Portfolio Showcase
+          </h2>
+
+          <!-- Category Toggle Buttons -->
+          <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+            <button
+              id="creatives-btn"
+              class="category-btn bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300"
+              type="button"
+            >
+              Ad Creatives/Spec Work
+            </button>
+            <button
+              id="copywriting-btn"
+              class="category-btn border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary hover:text-black transition-all duration-300"
+              type="button"
+            >
+              Data-Driven Copywriting
+            </button>
+          </div>
+
+          <div id="creatives-description" class="category-description">
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+              Ad creatives including video ads, static social media content, and display advertising that consistently meet/exceed industry standards for quality and speed of iteration.
+            </p>
+          </div>
+
+          <div id="copywriting-description" class="category-description hidden">
+            <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+              Professional SEO content marketing articles showcasing comprehensive research and strategic thinking. A Pillar page strategy with supporting articles and outbound links to real data/authoritative sources to improve organic reach. Astro image components for load speed allow for pages to load in 0.2-0.3 seconds on SEO optimized websites (slight variation for other frameworks).
+            </p>
+          </div>
+        </div>
+
+        <!-- Ad Creatives Grid -->
+        <div id="creatives-grid" class="portfolio-grid grid lg:grid-cols-2 gap-8">
+          {adCreatives.map((item, index) => (
+            <div class="glass-morphism rounded-xl p-8 hover:border-primary/50 transition-all duration-300 group">
+              <div class="flex flex-col h-full">
+                <!-- Project Media Preview -->
+                <div class="mb-6 rounded-lg overflow-hidden bg-transparent flex justify-center items-center relative cursor-pointer" style="height: 300px;" onclick={`openModal('${item.media.replace(/'/g, "\\'")}', '${item.type}', '${item.title.replace(/'/g, "\\'")}')`}>
+                  {item.type === 'video' ? (
+                    <div class="relative h-full w-auto">
+                      <video
+                        class="h-full w-auto max-w-full object-contain rounded-lg pointer-events-none"
+                        muted
+                        loop
+                        autoplay
+                        playsinline
+                        preload="metadata"
+                      >
+                        <source src={item.media} type="video/mp4">
+                        Your browser does not support the video tag.
+                      </video>
+                      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        <div class="bg-primary/90 text-black px-6 py-3 rounded-lg font-orbitron font-bold flex items-center gap-2">
+                          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                          </svg>
+                          View Full
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    <div class="relative h-full w-full flex justify-center items-center">
+                      <img
+                        src={item.media}
+                        alt={item.title}
+                        class="h-full w-auto max-w-full object-contain rounded-lg pointer-events-none"
+                      />
+                      <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                        <div class="bg-primary/90 text-black px-6 py-3 rounded-lg font-orbitron font-bold flex items-center gap-2">
+                          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                          </svg>
+                          View Full
+                        </div>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                <!-- Project Content -->
+                <div class="flex-grow">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-primary text-sm font-orbitron font-bold">
+                      {item.category}
+                    </span>
+                    <span class="text-gray-400 text-sm">
+                      Creative {item.id.toString().padStart(2, '0')}
+                    </span>
+                  </div>
+
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+
+                  <p class="text-gray-300 mb-6 leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  <!-- Category -->
+                  <div class="mb-6">
+                    <span class="bg-primary/20 text-primary text-sm px-4 py-2 rounded-full border border-primary/30 inline-block">
+                      {item.technologies[item.technologies.length - 1]}
+                    </span>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <!-- Copywriting Grid -->
+        <div id="copywriting-grid" class="portfolio-grid grid lg:grid-cols-2 gap-8 hidden">
+          {copywritingPortfolio.map((item, index) => (
+            <a href={item.url} class="glass-morphism rounded-xl p-8 hover:border-primary/50 transition-all duration-300 group block">
+              <div class="flex flex-col h-full">
+                <!-- Article Preview -->
+                <div class="mb-6 rounded-lg overflow-hidden bg-gray-900/50 border border-primary/10 p-6 flex items-center justify-center min-h-[200px]">
+                  <div class="text-center">
+                    <div class="text-primary mb-4">
+                      <svg class="w-16 h-16 mx-auto opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                      </svg>
+                    </div>
+                    <p class="text-gray-300 text-sm mb-2">Article Length</p>
+                    <p class="text-primary font-bold text-lg">{item.wordCount}</p>
+                  </div>
+                </div>
+
+                <!-- Project Content -->
+                <div class="flex-grow">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-primary text-sm font-orbitron font-bold">
+                      {item.category}
+                    </span>
+                    <span class="text-gray-400 text-sm">
+                      Article {item.id.toString().padStart(2, '0')}
+                    </span>
+                  </div>
+
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+
+                  <p class="text-gray-300 mb-6 leading-relaxed">
+                    {item.description}
+                  </p>
+
+
+                  <!-- Metrics -->
+                  <div class="bg-black/30 rounded-lg p-4 border border-primary/20">
+                    <h4 class="text-white font-semibold mb-2">Article Details:</h4>
+                    <p class="text-primary font-bold">
+                      {item.metrics}
+                    </p>
+                  </div>
+
+                  <!-- Read Article Button -->
+                  <div class="mt-4 text-center">
+                    <span class="inline-flex items-center gap-2 text-primary font-orbitron font-bold text-sm group-hover:text-white transition-colors duration-300">
+                      Read Full Article
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for Full-Size Viewing -->
+    <div id="mediaModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/95 p-4">
+      <button
+        type="button"
+        onclick="closeModal()"
+        class="absolute top-4 right-4 text-white hover:text-primary transition-colors duration-300 z-50"
+      >
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+
+      <div class="relative max-w-[95vw] max-h-[95vh] flex items-center justify-center">
+        <div id="modalContent" class="flex items-center justify-center">
+          <!-- Dynamic content will be inserted here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-t from-gray-900/50 to-transparent">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="animate-slide-up">
+          <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow">
+            LET'S COLLABORATE
+          </p>
+          <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-white mb-6">
+            Ready to Transform Your Business?
+          </h2>
+          <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+            Looking for performance marketing expertise, SEO strategy, or conversion optimization?
+            Let's discuss how I can help grow your business through data-driven marketing.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:zacharybenjaminforbes@gmail.com" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block">
+              Send Email
+            </a>
+            <a href="https://www.linkedin.com/in/zachforbes" target="_blank" rel="noopener noreferrer" class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary hover:text-black transition-all duration-300 inline-block">
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<script is:inline>
+  // Modal Functions - Global scope
+  window.openModal = function(mediaUrl, mediaType, title) {
+    const modal = document.getElementById('mediaModal');
+    const modalContent = document.getElementById('modalContent');
+
+    if (!modal || !modalContent) return;
+
+    // Clear previous content
+    modalContent.innerHTML = '';
+
+    if (mediaType === 'video') {
+      // Create video element for modal
+      const video = document.createElement('video');
+      video.controls = true;
+      video.autoplay = true;
+      video.className = 'max-w-full max-h-[90vh] w-auto h-auto';
+
+      const source = document.createElement('source');
+      source.src = mediaUrl;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+
+      modalContent.appendChild(video);
+    } else {
+      // Create image element for modal
+      const img = document.createElement('img');
+      img.src = mediaUrl;
+      img.alt = title;
+      img.className = 'max-w-full max-h-[90vh] w-auto h-auto object-contain';
+      modalContent.appendChild(img);
+    }
+
+    // Show modal
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  window.closeModal = function() {
+    const modal = document.getElementById('mediaModal');
+    const modalContent = document.getElementById('modalContent');
+
+    if (!modal || !modalContent) return;
+
+    // Hide modal
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = 'auto';
+
+    // Clear content
+    modalContent.innerHTML = '';
+  }
+
+  // Wait for DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    const creativesBtn = document.getElementById('creatives-btn');
+    const copywritingBtn = document.getElementById('copywriting-btn');
+
+    // Set initial state
+    showCategory('creatives');
+
+    // Add event listeners
+    creativesBtn?.addEventListener('click', () => showCategory('creatives'));
+    copywritingBtn?.addEventListener('click', () => showCategory('copywriting'));
+
+    function showCategory(category) {
+      // Hide all grids and descriptions
+      const creativesGrid = document.getElementById('creatives-grid');
+      const copywritingGrid = document.getElementById('copywriting-grid');
+      const creativesDesc = document.getElementById('creatives-description');
+      const copywritingDesc = document.getElementById('copywriting-description');
+
+      creativesGrid?.classList.add('hidden');
+      copywritingGrid?.classList.add('hidden');
+      creativesDesc?.classList.add('hidden');
+      copywritingDesc?.classList.add('hidden');
+
+      // Reset button styles
+      const allBtns = document.querySelectorAll('.category-btn');
+      allBtns.forEach(btn => {
+        btn.classList.remove('bg-primary', 'text-black');
+        btn.classList.add('border', 'border-primary', 'text-primary');
+      });
+
+      // Show selected category
+      if (category === 'creatives') {
+        creativesGrid?.classList.remove('hidden');
+        creativesDesc?.classList.remove('hidden');
+        creativesBtn?.classList.add('bg-primary', 'text-black');
+        creativesBtn?.classList.remove('border', 'border-primary', 'text-primary');
+      } else {
+        copywritingGrid?.classList.remove('hidden');
+        copywritingDesc?.classList.remove('hidden');
+        copywritingBtn?.classList.add('bg-primary', 'text-black');
+        copywritingBtn?.classList.remove('border', 'border-primary', 'text-primary');
+      }
+    }
+
+    // Close modal on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        window.closeModal();
+      }
+    });
+
+    // Close modal when clicking outside
+    document.getElementById('mediaModal')?.addEventListener('click', (e) => {
+      if (e.target === e.currentTarget) {
+        window.closeModal();
+      }
+    });
+  });
+</script>
+
+<style>
+  .group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+  }
+
+  .hidden {
+    display: none !important;
+  }
+
+  .category-btn {
+    cursor: pointer;
+  }
+
+  .category-btn:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+</style>

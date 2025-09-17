@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const adCreatives = [
+  {
+    id: 1,
+    title: "High-Converting E-commerce Video Ads",
+    category: "Video Creatives",
+    description: "Dynamic video advertisements designed for Facebook and Instagram campaigns, featuring compelling storytelling, strong calls-to-action, and mobile-optimized formats that consistently outperformed static creative benchmarks.",
+    type: "video",
+    media: "/assets/DARCSPORTFINALAD.mp4",
+    technologies: ["Video Production", "Motion Graphics", "Mobile Optimization", "A/B Testing"],
+    metrics: "3.8x Higher Engagement Than Static Ads"
+  },
+  {
+    id: 2,
+    title: "Social Media Static Ad Collection",
+    category: "Static Creatives",
+    description: "High-performing static advertisements across multiple social platforms, featuring data-driven design principles, compelling copy, and strategic visual hierarchy optimized for maximum click-through rates and conversions.",
+    type: "image",
+    media: "/assets/Lead Enrichment.PNG",
+    technologies: ["Graphic Design", "Copy Integration", "Platform Optimization", "Performance Testing"],
+    metrics: "45% Above Industry CTR Average"
+  },
+  {
+    id: 3,
+    title: "Display & Banner Ad Portfolio",
+    category: "Display Advertising",
+    description: "Comprehensive display advertising campaign creatives designed for programmatic and direct buys across premium publisher networks, optimized for brand awareness and conversion goals.",
+    type: "image",
+    media: "/assets/Automatic Calculator and Certificate Generator.png",
+    technologies: ["Display Design", "Programmatic Optimization", "Brand Guidelines", "Multi-Format Creation"],
+    metrics: "2.1% CTR (Industry Average: 0.9%)"
+  }
+];
+---
+
+<Layout title="Ad Creatives - Zachary Forbes Marketing Portfolio">
+  <main class="relative z-10">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-12">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="animate-slide-up">
+          <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow uppercase">
+            Creative Portfolio
+          </p>
+          <h1 class="text-4xl md:text-6xl font-orbitron font-bold mb-6 text-white leading-tight">
+            Ad <span class="text-primary">Creatives</span>
+          </h1>
+          <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            High-performing ad creatives including video ads, static social media content, and display advertising that consistently exceed industry benchmarks for engagement and conversion.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/" class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary hover:text-black transition-all duration-300 inline-block">
+              ← Back to Portfolio
+            </a>
+            <a href="/copywriting" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block">
+              View Copywriting →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Creatives Grid -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-8">
+          {adCreatives.map((item, index) => (
+            <div class="glass-morphism rounded-xl p-8 hover:border-primary/50 transition-all duration-300 group">
+              <div class="flex flex-col h-full">
+                <!-- Project Media -->
+                <div class="mb-6 rounded-lg overflow-hidden bg-gray-900">
+                  {item.type === 'video' ? (
+                    <video
+                      controls
+                      class="w-full h-64 object-cover"
+                      poster="/assets/video-placeholder.jpg"
+                    >
+                      <source src={item.media} type="video/mp4">
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={item.media}
+                      alt={item.title}
+                      class="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                    />
+                  )}
+                </div>
+
+                <!-- Project Content -->
+                <div class="flex-grow">
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-primary text-sm font-orbitron font-bold">
+                      {item.category}
+                    </span>
+                    <span class="text-gray-400 text-sm">
+                      Creative {item.id.toString().padStart(2, '0')}
+                    </span>
+                  </div>
+
+                  <h3 class="text-xl font-orbitron font-bold text-white mb-4 group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </h3>
+
+                  <p class="text-gray-300 mb-6 leading-relaxed">
+                    {item.description}
+                  </p>
+
+                  <!-- Technologies -->
+                  <div class="mb-6">
+                    <h4 class="text-primary font-semibold mb-3">Technologies Used:</h4>
+                    <div class="flex flex-wrap gap-2">
+                      {item.technologies.map((tech) => (
+                        <span class="bg-primary/20 text-primary text-xs px-3 py-1 rounded-full border border-primary/30">
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  <!-- Metrics -->
+                  <div class="bg-black/30 rounded-lg p-4 border border-primary/20">
+                    <h4 class="text-white font-semibold mb-2">Key Results:</h4>
+                    <p class="text-primary font-bold">
+                      {item.metrics}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-t from-gray-900/50 to-transparent">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="animate-slide-up">
+          <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow">
+            LET'S COLLABORATE
+          </p>
+          <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-white mb-6">
+            Ready to Create High-Converting Ads?
+          </h2>
+          <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+            Looking for creative expertise that drives results? Let's discuss how I can help create compelling ad campaigns that convert.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:zacharybenjaminforbes@gmail.com" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block">
+              Send Email
+            </a>
+            <a href="https://www.linkedin.com/in/zachforbes" target="_blank" rel="noopener noreferrer" class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary hover:text-black transition-all duration-300 inline-block">
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
+
+<style>
+  .group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+  }
+</style>

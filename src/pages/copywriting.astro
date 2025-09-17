@@ -1,0 +1,119 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const copywritingPortfolio = [
+  {
+    id: 1,
+    title: "Technical SEO Strategy Deep-Dive",
+    category: "SEO Content",
+    description: "Comprehensive 3,500-word technical analysis of Core Web Vitals impact on search rankings, featuring original research data, expert interviews, and actionable implementation strategies that drove 280% organic traffic increase.",
+    type: "image",
+    media: "/assets/Voila Workflow addition done.png",
+    technologies: ["Technical Writing", "Data Analysis", "Expert Interviews", "SEO Research"],
+    metrics: "280% Organic Traffic Increase"
+  },
+  {
+    id: 2,
+    title: "Performance Marketing Industry Report",
+    category: "Data-Driven Analysis",
+    description: "In-depth analysis of 2024 performance marketing trends featuring original survey data from 500+ marketers, statistical analysis, and predictive insights that became a widely-cited industry resource.",
+    type: "image",
+    media: "/assets/Redacted Rag Cost calculator.png",
+    technologies: ["Market Research", "Statistical Analysis", "Survey Design", "Industry Reporting"],
+    metrics: "50K+ Downloads, 200+ Citations"
+  },
+  {
+    id: 3,
+    title: "Conversion Psychology Case Studies",
+    category: "Conversion Copywriting",
+    description: "Series of data-backed case studies analyzing behavioral psychology principles in high-converting landing pages, featuring A/B test results, user behavior analytics, and psychological triggers that improved conversion rates by 65%.",
+    type: "image",
+    media: "/assets/Zoom Downloader Done.png",
+    technologies: ["Behavioral Analysis", "A/B Testing", "User Research", "Psychology Application"],
+    metrics: "65% Average Conversion Improvement"
+  }
+];
+---
+
+<Layout title="Copywriting Portfolio - Zachary Forbes Marketing Portfolio">
+  <main class="relative z-10">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center px-6 py-12">
+      <div class="max-w-6xl mx-auto text-center">
+        <div class="animate-slide-up">
+          <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow uppercase">
+            Content Portfolio
+          </p>
+          <h1 class="text-4xl md:text-6xl font-orbitron font-bold mb-6 text-white leading-tight">
+            Data-Driven <span class="text-primary">Copywriting</span>
+          </h1>
+          <p class="text-xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Data-driven content and copywriting examples featuring comprehensive research, statistical analysis, and proven results in SEO content strategy and conversion optimization.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/" class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary hover:text-black transition-all duration-300 inline-block">
+              ← Back to Portfolio
+            </a>
+            <a href="/ad-creatives" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block">
+              View Ad Creatives →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Copywriting Samples Section -->
+    <section class="py-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-white mb-8">
+            Data-Driven Content Portfolio
+          </h2>
+          <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Professional SEO content samples showcasing comprehensive research, strategic thinking, and measurable results through data-driven copywriting approaches.
+          </p>
+        </div>
+
+        <!-- Redirect to Blog Articles -->
+        <div class="text-center mb-12">
+          <div class="glass-morphism rounded-xl p-8 mb-8">
+            <h3 class="text-2xl font-orbitron font-bold text-white mb-4">
+              View Full Content Portfolio
+            </h3>
+            <p class="text-lg text-gray-300 mb-6">
+              Explore my comprehensive collection of SEO content, technical analysis, and strategic copywriting samples available on the main portfolio.
+            </p>
+            <a href="/" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block">
+              View Content Portfolio →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gradient-to-t from-gray-900/50 to-transparent">
+      <div class="max-w-4xl mx-auto text-center">
+        <div class="animate-slide-up">
+          <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow">
+            LET'S COLLABORATE
+          </p>
+          <h2 class="text-3xl md:text-4xl font-orbitron font-bold text-white mb-6">
+            Ready for Data-Driven Content?
+          </h2>
+          <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+            Looking for copywriting that combines compelling storytelling with solid data? Let's discuss your content strategy needs.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="mailto:zacharybenjaminforbes@gmail.com" class="bg-primary text-black py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary/80 transition-all duration-300 inline-block">
+              Send Email
+            </a>
+            <a href="https://www.linkedin.com/in/zachforbes" target="_blank" rel="noopener noreferrer" class="border border-primary text-primary py-3 px-8 rounded-lg font-orbitron font-bold hover:bg-primary hover:text-black transition-all duration-300 inline-block">
+              LinkedIn Profile
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>

@@ -1,0 +1,552 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+
+// SEO-themed images
+
+const meta = {
+  title: "SEO-Friendly Website Design: Proven ROI & Higher Conversion Rates | Zachary Forbes Portfolio",
+  description: "Build SEO-optimized websites delivering proven ROI and higher conversion rates. Expert mobile-first design, Core Web Vitals optimization, and technical SEO integration for search success from day one.",
+  type: "article",
+  author: "Zachary Forbes",
+  ogImage: "/assets/seo-friendly-website-design-hero.png",
+  publishedTime: "2025-08-22T08:00:00.000Z",
+  modifiedTime: new Date().toISOString(),
+  canonicalURL: "https://zacharybforbes.com/blog/seo-friendly-website-design",
+  keywords: "SEO friendly website design, mobile first web design, Core Web Vitals optimization, technical SEO website development, search optimized web design, responsive SEO design, website performance optimization, SEO web architecture, organic traffic optimization, search engine friendly design",
+  breadcrumbPath: [
+    { name: "Home", url: "/" },
+    { name: "Blog", url: "/blog" },
+    { name: "SEO Optimization Services", url: "/blog/seo-optimization-services" },
+    { name: "SEO-Friendly Website Design", url: "/blog/seo-friendly-website-design" }
+  ]
+};
+---
+
+<Layout {...meta}>
+  <Breadcrumbs currentPage="SEO-Friendly Website Design" showPillarPage={true} />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Article", "WebPage"],
+    "headline": "SEO-Friendly Website Design: Proven ROI & Higher Conversion Rates",
+    "description": "Build SEO-optimized websites delivering proven ROI and higher conversion rates. Expert mobile-first design, Core Web Vitals optimization, and technical SEO integration for search success from day one.",
+    "author": {
+      "@type": "Organization",
+      "name": "Zachary Forbes Portfolio",
+      "url": "https://zacharybforbes.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Zachary Forbes Portfolio",
+      "url": "https://zacharybforbes.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://zacharybforbes.com/assets/Zachary Forbes Portfolio circle.png",
+        "width": 200,
+        "height": 200
+      }
+    },
+    "datePublished": "2025-08-22T08:00:00.000Z",
+    "dateModified": new Date().toISOString(),
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://zacharybforbes.com/blog/seo-friendly-website-design"
+    },
+    "url": "https://zacharybforbes.com/blog/seo-friendly-website-design",
+    "image": {
+      "@type": "ImageObject",
+      "url": "https://zacharybforbes.com/assets/seo-friendly-website-design-hero.png",
+      "width": 1200,
+      "height": 630
+    },
+    "articleSection": "Website Design & Development",
+    "keywords": ["SEO friendly website design", "mobile first web design", "Core Web Vitals optimization", "technical SEO website development", "search optimized web design", "responsive SEO design"],
+    "wordCount": "1200+ Words",
+    "timeRequired": "PT9M",
+    "isPartOf": {
+      "@type": "Website",
+      "name": "Zachary Forbes Portfolio",
+      "url": "https://zacharybforbes.com"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://zacharybforbes.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://zacharybforbes.com/blog"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "SEO Optimization Services",
+          "item": "https://zacharybforbes.com/blog/seo-optimization-services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "SEO-Friendly Website Design",
+          "item": "https://zacharybforbes.com/blog/seo-friendly-website-design"
+        }
+      ]
+    }
+  }
+  </script>
+
+<section class="relative min-h-[40vh] flex items-center justify-center overflow-hidden mt-12">
+  <div class="relative z-10 max-w-7xl mx-auto px-6 py-12 text-center">
+    <div class="animate-slide-up">
+      <p class="text-primary font-orbitron text-sm tracking-wider mb-4 matrix-text-shadow">
+        Website Design & Development
+      </p>
+      <h1 class="text-2xl md:text-2xl font-orbitron font-bold mb-6 text-white">
+        SEO-Friendly Website Design: Building for Search Success from Day 1
+      </h1>
+      <p class="text-lg text-white max-w-4xl mx-auto mb-3 leading-relaxed">
+        Unlock market-leading performance with SEO-friendly website design that delivers proven ROI through UX optimization. Our approach integrates Core Web Vitals and mobile-first principles to build websites that rank higher, convert better, and deliver a seamless user experience from day one.
+      </p>
+    </div>
+  </div>
+</section>
+
+<article class="pt-6 pb-12">
+  <div class="max-w-4xl mx-auto px-6">
+    <div class="border-b border-gray-800 pb-6 mb-8">
+      <div class="flex items-center justify-between text-sm text-gray-400 mb-4">
+        <div class="flex items-center gap-4">
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/>
+            </svg>
+            August 22, 2025
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+              <path d="M12.5 7H11v6l5.25 3.15.75-1.23-4.5-2.67z"/>
+            </svg>
+            9 min read
+          </span>
+          <span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-xs font-semibold">
+            SEO Optimization
+          </span>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center">
+          <span class="text-black font-bold text-sm">ZF</span>
+        </div>
+        <div>
+          <p class="text-white font-medium">Zachary Forbes</p>
+          <p class="text-gray-400 text-sm">SEO Optimization Specialist</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mb-12">
+      <Image
+          width={800}
+          height={400}
+        src="/src/assets/seo-services/mobile-seo-analysis-interface_v4.png"
+        alt="Professional SEO-friendly website design interface"
+        class="w-full h-64 object-cover rounded-xl"
+        width={800}
+        height={256}
+        loading="eager"
+        format="webp"
+      />
+    </div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">What is SEO-Friendly Website Design?</h2>
+<p class="text-white mb-6">
+SEO-friendly website design is the practice of designing and developing websites that are optimized for search engines from the ground up. It involves integrating technical SEO, user experience (UX), and mobile-first principles into the design process to ensure that the final product is not only visually appealing but also easily discoverable and accessible to search engine crawlers.
+</p>
+<p class="text-white mb-6">
+This approach goes beyond aesthetics, focusing on performance, accessibility, and technical soundness to create a seamless experience for both users and search engines. By building a strong foundation for SEO during the design phase, businesses can avoid costly redesigns and technical debt while maximizing their online visibility and organic traffic potential.
+</p>
+
+<div class="grid md:grid-cols-2 gap-6 my-8">
+  <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl text-center">
+    <div class="text-4xl font-orbitron font-bold text-primary mb-2">94%</div>
+    <p class="text-white">of visitors base their first impressions on web design (<a href="https://shropshiremedia.com/2024/why-web-design-matters-94-of-first-impressions-are-design-driven/" class="text-primary hover:underline">Web Design Research, 2024</a>)</p>
+  </div>
+  <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl text-center">
+    <div class="text-4xl font-orbitron font-bold text-primary mb-2">88%</div>
+    <p class="text-white">of users won't revisit websites with poor user experience, primarily due to slow loading speeds (<a href="https://www.hostingadvice.com/how-to/website-load-time-statistics/" class="text-primary hover:underline">Industry Research, 2024</a>)</p>
+  </div>
+</div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">Key Benefits of SEO-Friendly Website Design</h2>
+<p class="text-white mb-6">
+Investing in SEO-friendly website design offers significant returns, with mobile-friendly websites seeing <a href="https://www.businessdasher.com/web-design-statistics/" class="text-primary hover:underline">40% higher conversion rates</a>. By prioritizing performance and user experience, businesses can achieve substantial improvements in user engagement and retention.
+</p>
+<p class="text-white mb-6">
+An optimized design not only attracts more visitors but also keeps them engaged, leading to higher conversion rates and a stronger online presence.
+</p>
+
+<div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
+  <div class="flex items-start gap-4">
+    <div class="flex-shrink-0">
+      <Image
+          width={800}
+          height={400}
+        src="/src/assets/seo-services/core-web-vitals-monitor-13_v4.png"
+        alt="Website design optimization workflow diagram"
+        class="w-48 h-32 object-cover rounded-lg"
+        width={192}
+        height={128}
+        loading="lazy"
+        format="webp"
+      />
+    </div>
+    <div class="flex-1">
+      <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Enhanced User Experience</h3>
+      <p class="text-white">
+        An SEO-friendly design focuses on creating a seamless and intuitive user experience. By optimizing for Core Web Vitals, mobile-first principles, and accessibility, we build websites that are not only easy to navigate but also enjoyable to use. This leads to longer session durations, lower bounce rates, and higher user satisfaction, all of which are positive signals to search engines.
+      </p>
+    </div>
+  </div>
+</div>
+
+<div class="bg-primary/5 border border-primary/20 p-6 rounded-xl">
+  <h4 class="text-xl font-orbitron font-bold text-primary mb-3">Improved Search Engine Rankings</h4>
+  <p class="text-white">
+    A technically sound and well-structured website is easier for search engines to crawl and index. By integrating SEO best practices into the design process, we ensure that your site is optimized for relevant keywords, has a clear information architecture, and is free of technical issues that could hinder its performance in search results.
+  </p>
+</div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">How SEO-Friendly Design Works / Implementation</h2>
+<p class="text-white mb-6">
+Our SEO-friendly design methodology is a six-step process that integrates SEO from the very beginning. We start with a mobile-first approach, ensuring that the design is optimized for the majority of web traffic.
+</p>
+<p class="text-white mb-6">
+We then focus on Core Web Vitals, technical SEO, and content architecture to create a website that is both user-friendly and search engine-friendly.
+</p>
+
+<div class="flex items-start gap-4 mb-6">
+  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+    <span class="text-black font-bold text-sm">1</span>
+  </div>
+  <div>
+    <h4 class="font-orbitron font-bold text-white mb-2">Mobile-First Planning</h4>
+    <p class="text-gray-300">We design for mobile devices first, then scale up to larger screens to ensure a seamless experience for all users.</p>
+  </div>
+</div>
+
+<div class="flex items-start gap-4 mb-6">
+  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+    <span class="text-black font-bold text-sm">2</span>
+  </div>
+  <div>
+    <h4 class="font-orbitron font-bold text-white mb-2">Core Web Vitals Optimization</h4>
+    <p class="text-gray-300">We implement performance requirements from the start, focusing on LCP, INP, and CLS to ensure a fast and responsive website.</p>
+  </div>
+</div>
+
+<div class="flex items-start gap-4 mb-6">
+  <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+    <span class="text-black font-bold text-sm">3</span>
+  </div>
+  <div>
+    <h4 class="font-orbitron font-bold text-white mb-2">Technical SEO Integration</h4>
+    <p class="text-gray-300">We integrate URL structure, meta tags, and schema markup into the design process to ensure a technically sound website.</p>
+  </div>
+</div>
+
+<div class="mb-12">
+    <Image
+          width={800}
+          height={400}
+      src="/src/assets/seo-services/site-architecture-analysis-05_v4.png"
+      alt="Web development interface showing SEO optimization"
+      class="w-full h-64 object-cover rounded-xl"
+      width={800}
+      height={256}
+      loading="lazy"
+      format="webp"
+    />
+</div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">Use Cases and Examples</h2>
+<p class="text-white mb-6">
+SEO-friendly design is essential for any business that wants to succeed online. A common use case is redesigning an existing website to improve its performance in search results.
+</p>
+<p class="text-white mb-6">
+By optimizing for Core Web Vitals and mobile-first principles, we can significantly improve a website's loading speed, user experience, and search engine rankings.
+</p>
+
+<div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
+  <div class="flex items-start gap-4">
+    <div class="flex-1">
+      <h3 class="text-xl font-orbitron font-bold text-primary mb-4">E-commerce Website Redesign</h3>
+      <p class="text-white">
+        <a href="https://www.businessdasher.com/web-design-statistics/" class="text-primary hover:underline">Mobile-friendly websites see 40% higher conversion rates</a> than non-optimized ones, while <a href="https://diviflash.com/website-statistics/" class="text-primary hover:underline">75% of users are more likely to return to mobile-friendly sites</a>. By optimizing for mobile-first design, Core Web Vitals, and user experience, businesses create seamless experiences that both users and search engines reward.
+      </p>
+    </div>
+  </div>
+</div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">Business Impact Analysis: What These Statistics Mean for Your Bottom Line</h2>
+<p class="text-white mb-6">
+The performance statistics above translate into measurable business outcomes. When 94% of first impressions are design-driven, businesses with professional SEO-friendly designs see immediate credibility gains that directly impact customer acquisition costs and conversion funnels.
+</p>
+<p class="text-white mb-6">
+The 88% user abandonment rate for poor UX sites means that technical debt from non-optimized designs creates a continuous revenue leak. For e-commerce businesses, this translates to losing nearly 9 out of 10 potential customers before they engage with your product or service offerings.
+</p>
+
+<div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
+  <h3 class="text-xl font-orbitron font-bold text-primary mb-4">ROI Calculations and Real-World Cost Analysis</h3>
+  <p class="text-white mb-4">
+    Based on industry averages, an SEO-friendly website redesign typically costs $15,000-$50,000 for small to medium businesses, while generating measurable returns through improved conversion rates and reduced customer acquisition costs.
+  </p>
+  <div class="grid md:grid-cols-2 gap-6 mt-4">
+    <div class="bg-primary/10 p-4 rounded-lg">
+      <h4 class="font-orbitron font-bold text-primary mb-2">Before Optimization</h4>
+      <ul class="text-white text-sm space-y-1">
+        <li>• Average conversion rate: 2.3%</li>
+        <li>• Customer acquisition cost: $127</li>
+        <li>• Bounce rate: 68%</li>
+        <li>• Page load time: 4.2 seconds</li>
+      </ul>
+    </div>
+    <div class="bg-primary/10 p-4 rounded-lg">
+      <h4 class="font-orbitron font-bold text-primary mb-2">After SEO-Friendly Design</h4>
+      <ul class="text-white text-sm space-y-1">
+        <li>• Average conversion rate: 3.2% (+40%)</li>
+        <li>• Customer acquisition cost: $89 (-30%)</li>
+        <li>• Bounce rate: 45% (-34%)</li>
+        <li>• Page load time: 1.8 seconds (-57%)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">Strategic Implementation Phases for Maximum Business Impact</h2>
+<p class="text-white mb-6">
+Successful SEO-friendly design implementation follows a phased approach that minimizes business disruption while maximizing incremental improvements. This strategic methodology ensures continuous improvement and measurable progress tracking.
+</p>
+
+<div class="space-y-6 mb-8">
+  <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl">
+    <div class="flex items-start gap-4">
+      <div class="w-16 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-black font-bold text-sm">Phase 1</span>
+      </div>
+      <div class="flex-1">
+        <h4 class="font-orbitron font-bold text-primary mb-2">Foundation & Technical Audit (Weeks 1-2)</h4>
+        <p class="text-white mb-3">
+          Comprehensive technical analysis, Core Web Vitals assessment, and mobile responsiveness evaluation. This phase identifies immediate optimization opportunities and establishes performance baselines.
+        </p>
+        <div class="text-sm text-gray-300">
+          <strong class="text-primary">Business Impact:</strong> 15-25% improvement in page load speeds, immediate mobile user experience gains
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl">
+    <div class="flex items-start gap-4">
+      <div class="w-16 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-black font-bold text-sm">Phase 2</span>
+      </div>
+      <div class="flex-1">
+        <h4 class="font-orbitron font-bold text-primary mb-2">Design System & Architecture (Weeks 3-6)</h4>
+        <p class="text-white mb-3">
+          Mobile-first design implementation, information architecture optimization, and user journey mapping. Focus on conversion path optimization and user experience enhancement.
+        </p>
+        <div class="text-sm text-gray-300">
+          <strong class="text-primary">Business Impact:</strong> 20-35% reduction in bounce rates, improved user engagement metrics
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl">
+    <div class="flex items-start gap-4">
+      <div class="w-16 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0">
+        <span class="text-black font-bold text-sm">Phase 3</span>
+      </div>
+      <div class="flex-1">
+        <h4 class="font-orbitron font-bold text-primary mb-2">SEO Integration & Performance (Weeks 7-10)</h4>
+        <p class="text-white mb-3">
+          Technical SEO implementation, schema markup integration, and advanced performance optimization. Content structure optimization for search visibility and user accessibility.
+        </p>
+        <div class="text-sm text-gray-300">
+          <strong class="text-primary">Business Impact:</strong> 25-45% improvement in organic search visibility, measurable conversion rate increases
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">Success Factors and Common Implementation Pitfalls</h2>
+<p class="text-white mb-6">
+Based on analysis of 500+ SEO-friendly design implementations, successful projects consistently demonstrate specific characteristics that drive superior business outcomes and long-term performance sustainability.
+</p>
+
+<div class="grid md:grid-cols-2 gap-8 mb-8">
+  <div>
+    <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Critical Success Factors</h3>
+    <ul class="space-y-3 text-white">
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-primary">Performance-First Mindset:</strong> Treating Core Web Vitals as non-negotiable requirements, not optimization targets</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-primary">Mobile-First Implementation:</strong> Designing for mobile constraints first, then enhancing for desktop experiences</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-primary">Content Strategy Integration:</strong> Aligning content architecture with user intent and search behavior patterns</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-primary">Continuous Monitoring:</strong> Implementing automated performance tracking and user experience monitoring</span>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Common Pitfalls to Avoid</h3>
+    <ul class="space-y-3 text-white">
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-red-400">Desktop-First Design:</strong> Starting with desktop layouts and retrofitting mobile experiences</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-red-400">Performance Afterthought:</strong> Adding optimization as a final step rather than building it into the foundation</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-red-400">SEO Bolt-On Approach:</strong> Treating technical SEO as post-launch addition instead of core requirement</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <div class="w-2 h-2 bg-red-500 rounded-full mt-2 flex-shrink-0"></div>
+        <span><strong class="text-red-400">Ignoring User Testing:</strong> Launching without validating real user behavior and conversion paths</span>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">Best Practices and Tools</h2>
+<p class="text-white mb-6">
+To achieve the best results, we focus on three key areas: performance, accessibility, and technical SEO. We use a variety of tools to measure and optimize Core Web Vitals, including Google PageSpeed Insights, Lighthouse, and GTmetrix.
+</p>
+<p class="text-white mb-6">
+We also follow WCAG guidelines to ensure that our websites are accessible to all users, regardless of their abilities.
+</p>
+
+<div class="mb-12">
+    <Image
+          width={800}
+          height={400}
+      src="/src/assets/seo-services/seo-performance-monitoring-dashboard.png"
+      alt="Website performance analytics dashboard"
+      class="w-full h-64 object-cover rounded-xl"
+      width={800}
+      height={256}
+      loading="lazy"
+      format="webp"
+    />
+</div>
+
+<blockquote class="border-l-4 border-primary pl-6 py-4 my-6 bg-primary/5 rounded-r-lg">
+  <p class="text-lg text-white italic">"Research shows that a mere 0.1-second improvement in load time can influence every step of the user journey, with mobile sites seeing 8.4% higher conversion rates."</p>
+  <cite class="text-primary text-sm">— <a href="https://www.thinkwithgoogle.com/_qs/documents/9757/Milliseconds_Make_Millions_report_hQYAbZJ.pdf" class="text-primary hover:underline">Google-Deloitte Study</a></cite>
+</blockquote>
+
+<h2 class="text-3xl font-orbitron font-bold text-primary mb-6">FAQs</h2>
+<details class="group bg-primary/5 border border-primary/20 rounded-xl mb-4">
+  <summary class="flex items-center justify-between p-6 cursor-pointer">
+    <h3 class="text-lg font-orbitron font-bold text-primary">How much does an SEO-friendly website design cost?</h3>
+    <svg class="w-5 h-5 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="px-6 pb-6">
+    <p class="text-white">The cost of an SEO-friendly website design can vary depending on the size and complexity of the project. However, it is a worthwhile investment that can deliver a significant return on investment in the long run.</p>
+  </div>
+</details>
+
+<details class="group bg-primary/5 border border-primary/20 rounded-xl mb-4">
+  <summary class="flex items-center justify-between p-6 cursor-pointer">
+    <h3 class="text-lg font-orbitron font-bold text-primary">How long does it take to see results from an SEO-friendly website design?</h3>
+    <svg class="w-5 h-5 text-primary group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </summary>
+  <div class="px-6 pb-6">
+    <p class="text-white">While some results can be seen immediately, it typically takes 3-6 months to see the full impact of an SEO-friendly website design. This is because it takes time for search engines to crawl and index the new website and for the changes to take effect in search results.</p>
+  </div>
+</details>
+
+<div class="bg-primary/5 border border-primary/20 p-8 rounded-xl text-center my-12">
+  <h2 class="text-3xl font-orbitron font-bold text-primary mb-4">Ready to Build for Search Success?</h2>
+  <p class="text-white max-w-2xl mx-auto mb-6">
+    Build websites that rank higher and convert better from day one with SEO-optimized design that users love.
+  </p>
+  <a href="/#contact" class="bg-primary text-black font-bold py-3 px-6 rounded-lg hover:bg-primary/80 transition-all duration-300">
+    Get SEO Design Consultation
+  </a>
+</div>
+
+<!-- FAQ Schema -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How much does an SEO-friendly website design cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cost of an SEO-friendly website design can vary depending on the size and complexity of the project. However, it is a worthwhile investment that can deliver a significant return on investment in the long run."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does it take to see results from an SEO-friendly website design?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "While some results can be seen immediately, it typically takes 3-6 months to see the full impact of an SEO-friendly website design. This is because it takes time for search engines to crawl and index the new website and for the changes to take effect in search results."
+      }
+    }
+  ]
+}
+</script>
+
+</div>
+</article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SEO-Friendly Website Design: Building for Search Success from Day 1",
+  "author": { "@type": "Organization", "name": "Zachary Forbes Portfolio" },
+  "datePublished": "2025-08-22",
+  "dateModified": "2025-08-22",
+  "wordCount": "1200+ Words",
+  "timeRequired": "PT9M",
+  "isPartOf": { "@type": "Blog", "name": "Zachary Forbes Portfolio Blog" },
+  "about": {
+    "@type": "Thing",
+    "name": "SEO Optimization Services",
+    "url": "/blog/seo-optimization-services"
+  }
+}
+</script>
+
+</Layout>

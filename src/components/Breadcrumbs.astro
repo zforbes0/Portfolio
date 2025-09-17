@@ -1,0 +1,68 @@
+---
+interface Props {
+  currentPage: string;
+  showPillarPage?: boolean;
+}
+
+const { currentPage, showPillarPage = false } = Astro.props;
+
+// Define breadcrumb structure
+const breadcrumbs = [
+  { name: "Home", url: "/" }
+];
+
+// Add pillar page if needed (for sub-articles)
+if (showPillarPage) {
+  breadcrumbs.push({ name: "SEO Optimization Services", url: "/blog/seo-optimization-services" });
+}
+
+// Add current page (not clickable)
+breadcrumbs.push({ name: currentPage, url: null });
+---
+
+<nav id="navbar" class="bg-black border-b border-primary/20 py-2 fixed top-0 left-0 right-0 transition-transform duration-300" style="z-index: 9999;">
+  <div class="max-w-7xl mx-auto px-6">
+    <ol class="flex items-center space-x-2 text-sm">
+      {breadcrumbs.map((crumb, index) => (
+        <li class="flex items-center">
+          {index > 0 && (
+            <svg class="w-4 h-4 text-primary/60 mx-2" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          )}
+          {crumb.url ? (
+            <a href={crumb.url} class="text-primary hover:text-primary/80 transition-colors">
+              {crumb.name}
+            </a>
+          ) : (
+            <span class="text-white">
+              {crumb.name}
+            </span>
+          )}
+        </li>
+      ))}
+    </ol>
+  </div>
+</nav>
+
+<script>
+  let lastScrollY = window.scrollY;
+  let navbar = document.getElementById('navbar');
+
+  window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const halfPageScroll = windowHeight / 2;
+
+    // Hide navbar when scrolling down past 100px
+    if (currentScrollY > 100 && currentScrollY > lastScrollY) {
+      navbar.style.transform = 'translateY(-100%)';
+    }
+    // Show navbar when scrolling up by half a page OR when near top
+    else if (currentScrollY < lastScrollY && (currentScrollY < 100 || (lastScrollY - currentScrollY) > halfPageScroll / 4)) {
+      navbar.style.transform = 'translateY(0)';
+    }
+
+    lastScrollY = currentScrollY;
+  });
+</script>
