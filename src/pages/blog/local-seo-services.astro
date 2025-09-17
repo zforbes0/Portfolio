@@ -3,6 +3,10 @@ import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
+// Image imports
+import localSeoOptimization from '../../assets/seo-services/local-seo-optimization-08_v4.png';
+import seoWorkflowAutomation from '../../assets/seo-services/seo-workflow-automation-16.png';
+import mobileSeoAnalysisInterface from '../../assets/seo-services/mobile-seo-analysis-interface_v4.png';
 
 
 const meta = {
@@ -81,7 +85,7 @@ const meta = {
         <Image
           width={800}
           height={400}
-          src="/src/assets/seo-services/local-seo-optimization-08_v4.png"
+          src={localSeoOptimization}
           alt="Local SEO Services optimization dashboard showing geographic targeting and local search analytics"
           width={800}
           height={450}
@@ -139,7 +143,7 @@ const meta = {
           <Image
           width={800}
           height={400}
-            src="/src/assets/seo-services/seo-workflow-automation-16.png"
+            src={seoWorkflowAutomation}
             alt="Systematic local SEO workflow automation showing step-by-step optimization methodology and process management"
             class="w-48 h-32 aspect-[3/2] object-cover rounded-lg"
           />
@@ -235,7 +239,7 @@ const meta = {
             <Image
           width={800}
           height={400}
-              src="/src/assets/seo-services/mobile-seo-analysis-interface_v4.png"
+              src={mobileSeoAnalysisInterface}
               alt="Mobile local search interface displaying geographic targeting results, local business listings, and mobile SEO performance analytics"
               class="w-48 h-32 aspect-[3/2] object-cover rounded-lg"
             />

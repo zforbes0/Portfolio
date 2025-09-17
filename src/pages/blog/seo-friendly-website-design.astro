@@ -3,7 +3,11 @@ import Layout from '../../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-// SEO-themed images
+// Image imports
+import mobileSeoAnalysisInterface from '../../assets/seo-services/mobile-seo-analysis-interface_v4.png';
+import coreWebVitalsMonitor from '../../assets/seo-services/core-web-vitals-monitor-13_v4.png';
+import siteArchitectureAnalysis from '../../assets/seo-services/site-architecture-analysis-05_v4.png';
+import seoPerformanceDashboard from '../../assets/seo-services/seo-performance-monitoring-dashboard.png';
 
 const meta = {
   title: "SEO-Friendly Website Design: Proven ROI & Higher Conversion Rates | Zachary Forbes Portfolio",
@@ -156,7 +160,7 @@ const meta = {
       <Image
           width={800}
           height={400}
-        src="/src/assets/seo-services/mobile-seo-analysis-interface_v4.png"
+        src={mobileSeoAnalysisInterface}
         alt="Professional SEO-friendly website design interface"
         class="w-full h-64 object-cover rounded-xl"
         width={800}
@@ -199,7 +203,7 @@ An optimized design not only attracts more visitors but also keeps them engaged,
       <Image
           width={800}
           height={400}
-        src="/src/assets/seo-services/core-web-vitals-monitor-13_v4.png"
+        src={coreWebVitalsMonitor}
         alt="Website design optimization workflow diagram"
         class="w-48 h-32 object-cover rounded-lg"
         width={192}
@@ -266,7 +270,7 @@ We then focus on Core Web Vitals, technical SEO, and content architecture to cre
     <Image
           width={800}
           height={400}
-      src="/src/assets/seo-services/site-architecture-analysis-05_v4.png"
+      src={siteArchitectureAnalysis}
       alt="Web development interface showing SEO optimization"
       class="w-full h-64 object-cover rounded-xl"
       width={800}
@@ -451,7 +455,7 @@ We also follow WCAG guidelines to ensure that our websites are accessible to all
     <Image
           width={800}
           height={400}
-      src="/src/assets/seo-services/seo-performance-monitoring-dashboard.png"
+      src={seoPerformanceDashboard}
       alt="Website performance analytics dashboard"
       class="w-full h-64 object-cover rounded-xl"
       width={800}
