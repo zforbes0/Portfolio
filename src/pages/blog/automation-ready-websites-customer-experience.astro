@@ -290,32 +290,29 @@ const meta = {
           </div>
 
           <!-- ROI Showcase -->
-          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
-                  <Image
+          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8 overflow-auto">
+            <!-- Using float layout for natural text wrapping -->
+            <div>
+              <div class="float-none md:float-left w-full md:w-48 mb-4 md:mr-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                <Image
           width={800}
           height={400}
-                    src={roiMetricsDashboard}
-                    alt="Business dashboard showing automated customer experience metrics and personalization analytics"
-                    class="w-48 h-32 object-cover rounded-lg"
-                    width={800}
-                    height={400}
-                    style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
-                    loading="lazy"
-                    format="webp"
-                  />
-                </div>
+                  src={roiMetricsDashboard}
+                  alt="Business dashboard showing automated customer experience metrics and personalization analytics"
+                  class="w-full h-auto md:w-48 md:h-32 object-cover rounded-lg"
+                  width={800}
+                  height={400}
+                  style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                  loading="lazy"
+                  format="webp"
+                />
               </div>
-              <div class="flex-1">
-                <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Real-World Impact</h3>
-                <ul class="text-white space-y-2">
-                  <li><strong>Yves Rocher:</strong> <a href="https://www.bloomreach.com/en/case-studies/yves-rocher-upgrades-personalization-with-bloomreachs-real-time-product-recommendations" class="text-primary hover:underline">11x increase in purchase rate through personalized automation</a></li>
-                  <li><strong>Bank of America:</strong> <a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html" class="text-primary hover:underline">58+ million monthly customer interactions</a> via automated Erica chatbot</li>
-                  <li><strong>Netflix:</strong> <a href="https://research.netflix.com/research-area/recommendations" class="text-primary hover:underline">80% of views driven by recommendation algorithms</a></li>
-                </ul>
-              </div>
+              <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Real-World Impact</h3>
+              <ul class="text-white space-y-2">
+                <li><strong>Yves Rocher:</strong> <a href="https://www.bloomreach.com/en/case-studies/yves-rocher-upgrades-personalization-with-bloomreachs-real-time-product-recommendations" class="text-primary hover:underline">11x increase in purchase rate through personalized automation</a></li>
+                <li><strong>Bank of America:</strong> <a href="https://newsroom.bankofamerica.com/content/newsroom/press-releases/2025/08/a-decade-of-ai-innovation--bofa-s-virtual-assistant-erica-surpas.html" class="text-primary hover:underline">58+ million monthly customer interactions</a> via automated Erica chatbot</li>
+                <li><strong>Netflix:</strong> <a href="https://research.netflix.com/research-area/recommendations" class="text-primary hover:underline">80% of views driven by recommendation algorithms</a></li>
+              </ul>
             </div>
           </div>
 
@@ -334,33 +331,30 @@ const meta = {
           </p>
 
           <!-- Process Workflow Visualization -->
-          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
-                  <Image
+          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8 overflow-auto">
+            <!-- Using float layout for natural text wrapping -->
+            <div>
+              <div class="float-none md:float-left w-full md:w-48 mb-4 md:mr-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                <Image
           width={800}
           height={400}
-                    src={bpaAutomationTransformation}
-                    alt="Customer journey automation workflow diagram showing touchpoint optimization and experience personalization"
-                    class="w-48 h-32 object-cover rounded-lg"
-                    width={800}
-                    height={400}
-                    style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
-                    loading="lazy"
-                    format="webp"
-                  />
-                </div>
+                  src={bpaAutomationTransformation}
+                  alt="Customer journey automation workflow diagram showing touchpoint optimization and experience personalization"
+                  class="w-full h-auto md:w-48 md:h-32 object-cover rounded-lg"
+                  width={800}
+                  height={400}
+                  style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                  loading="lazy"
+                  format="webp"
+                />
               </div>
-              <div class="flex-1">
-                <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Automation Workflow Process</h3>
-                <ol class="text-white space-y-2">
-                  <li><strong>1. Visitor Detection:</strong> Track user behavior, preferences, and interaction patterns</li>
-                  <li><strong>2. Dynamic Response:</strong> Trigger personalized content and automated assistance</li>
-                  <li><strong>3. Real-time Optimization:</strong> Continuously adapt experiences based on user feedback</li>
-                  <li><strong>4. Conversion Enhancement:</strong> Guide users through optimized customer journeys</li>
-                </ol>
-              </div>
+              <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Automation Workflow Process</h3>
+              <ol class="text-white space-y-2">
+                <li><strong>1. Visitor Detection:</strong> Track user behavior, preferences, and interaction patterns</li>
+                <li><strong>2. Dynamic Response:</strong> Trigger personalized content and automated assistance</li>
+                <li><strong>3. Real-time Optimization:</strong> Continuously adapt experiences based on user feedback</li>
+                <li><strong>4. Conversion Enhancement:</strong> Guide users through optimized customer journeys</li>
+              </ol>
             </div>
           </div>
 
@@ -376,62 +370,56 @@ const meta = {
           </p>
 
           <!-- E-commerce Use Case -->
-          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
-                  <Image
+          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8 overflow-auto">
+            <!-- Using float layout for natural text wrapping -->
+            <div>
+              <div class="float-none md:float-left w-full md:w-48 mb-4 md:mr-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                <Image
           width={800}
           height={400}
-                    src={conversionTrackingSystem}
-                    alt="E-commerce automation dashboard showing automated product recommendations and customer behavior tracking"
-                    class="w-48 h-32 object-cover rounded-lg"
-                    width={800}
-                    height={400}
-                    style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
-                    loading="lazy"
-                    format="webp"
-                  />
-                </div>
+                  src={conversionTrackingSystem}
+                  alt="E-commerce automation dashboard showing automated product recommendations and customer behavior tracking"
+                  class="w-full h-auto md:w-48 md:h-32 object-cover rounded-lg"
+                  width={800}
+                  height={400}
+                  style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                  loading="lazy"
+                  format="webp"
+                />
               </div>
-              <div class="flex-1">
-                <h3 class="text-xl font-orbitron font-bold text-primary mb-4">E-commerce Automation</h3>
-                <ul class="text-white space-y-2">
-                  <li><strong>Product Recommendations:</strong> <a href="https://www.barilliance.com/personalized-product-recommendations-stats/" class="text-primary hover:underline">AI-driven suggestions increase order value by 10-30%</a></li>
-                  <li><strong>Dynamic Pricing:</strong> Real-time price optimization can significantly improve profit margins through dynamic pricing strategies</li>
-                  <li><strong>Cart Recovery:</strong> <a href="https://www.klaviyo.com/blog/abandoned-cart-email" class="text-primary hover:underline">Automated follow-up recovers 15-25% of abandoned purchases</a></li>
-                </ul>
-              </div>
+              <h3 class="text-xl font-orbitron font-bold text-primary mb-4">E-commerce Automation</h3>
+              <ul class="text-white space-y-2">
+                <li><strong>Product Recommendations:</strong> <a href="https://www.barilliance.com/personalized-product-recommendations-stats/" class="text-primary hover:underline">AI-driven suggestions increase order value by 10-30%</a></li>
+                <li><strong>Dynamic Pricing:</strong> Real-time price optimization can significantly improve profit margins through dynamic pricing strategies</li>
+                <li><strong>Cart Recovery:</strong> <a href="https://www.klaviyo.com/blog/abandoned-cart-email" class="text-primary hover:underline">Automated follow-up recovers 15-25% of abandoned purchases</a></li>
+              </ul>
             </div>
           </div>
 
           <!-- Service Industry Use Case -->
-          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
-            <div class="flex items-start gap-4">
-              <div class="flex-shrink-0">
-                <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
-                  <Image
+          <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8 overflow-auto">
+            <!-- Using float layout for natural text wrapping -->
+            <div>
+              <div class="float-none md:float-left w-full md:w-48 mb-4 md:mr-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+                <Image
           width={800}
           height={400}
-                    src={customerSupportAutomation}
-                    alt="Service automation interface showing automated customer support and service delivery workflows"
-                    class="w-48 h-32 object-cover rounded-lg"
-                    width={800}
-                    height={400}
-                    style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
-                    loading="lazy"
-                    format="webp"
-                  />
-                </div>
+                  src={customerSupportAutomation}
+                  alt="Service automation interface showing automated customer support and service delivery workflows"
+                  class="w-full h-auto md:w-48 md:h-32 object-cover rounded-lg"
+                  width={800}
+                  height={400}
+                  style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+                  loading="lazy"
+                  format="webp"
+                />
               </div>
-              <div class="flex-1">
-                <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Service Industry Applications</h3>
-                <ul class="text-white space-y-2">
-                  <li><strong>Appointment Scheduling:</strong> Automated booking with calendar integration</li>
-                  <li><strong>Service Recommendations:</strong> Personalized suggestions based on customer profile</li>
-                  <li><strong>Follow-up Automation:</strong> Post-service surveys and maintenance reminders</li>
-                </ul>
-              </div>
+              <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Service Industry Applications</h3>
+              <ul class="text-white space-y-2">
+                <li><strong>Appointment Scheduling:</strong> Automated booking with calendar integration</li>
+                <li><strong>Service Recommendations:</strong> Personalized suggestions based on customer profile</li>
+                <li><strong>Follow-up Automation:</strong> Post-service surveys and maintenance reminders</li>
+              </ul>
             </div>
           </div>
 
@@ -469,20 +457,16 @@ const meta = {
           </div>
 
           <!-- Implementation Tools -->
-          <div class="flex items-start gap-6 mb-8">
-            <div class="flex-1">
-              <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Popular Implementation Tools</h3>
-              <p class="text-white mb-4">Leading platforms for website automation include HubSpot for marketing automation, Zendesk for customer support, and Salesforce for CRM integration. <a href="https://www.multechnologies.com/blog/average-time-to-return-on-investment-roi-for-automation" class="text-primary hover:underline">Most solutions achieve positive ROI within 6-12 months</a>.</p>
-              <p class="text-white">Advanced implementations leverage Progressive Web App (PWA) technology, combining the best of websites and mobile apps for superior user experiences.</p>
-            </div>
-            <div class="flex-shrink-0">
-              <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+          <div class="overflow-auto mb-8">
+            <!-- Using float layout for natural text wrapping -->
+            <div>
+              <div class="float-none md:float-right w-full md:w-48 mb-4 md:ml-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
                 <Image
           width={800}
           height={400}
                   src={bpaStrategicConsulting}
                   alt="Team implementing website automation tools and customer experience optimization systems"
-                  class="w-48 h-32 object-cover rounded-lg"
+                  class="w-full h-auto md:w-48 md:h-32 object-cover rounded-lg"
                   width={800}
                   height={400}
                   style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
@@ -490,6 +474,9 @@ const meta = {
                   format="webp"
                 />
               </div>
+              <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Popular Implementation Tools</h3>
+              <p class="text-white mb-4">Leading platforms for website automation include HubSpot for marketing automation, Zendesk for customer support, and Salesforce for CRM integration. <a href="https://www.multechnologies.com/blog/average-time-to-return-on-investment-roi-for-automation" class="text-primary hover:underline">Most solutions achieve positive ROI within 6-12 months</a>.</p>
+              <p class="text-white">Advanced implementations leverage Progressive Web App (PWA) technology, combining the best of websites and mobile apps for superior user experiences.</p>
             </div>
           </div>
 

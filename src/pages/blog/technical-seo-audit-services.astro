@@ -236,13 +236,13 @@ const metadata = {
       Investing in a technical SEO audit isn't just a preventative measure; it's a strategic move that delivers tangible business results.
     </p>
 
-    <div class="flex items-start gap-6 mb-8">
-      <div class="flex-1">
+    <div class="flex flex-col md:flex-row items-start gap-6 mb-8">
+      <div class="flex-1 order-2 md:order-1">
         <p class="text-white mb-4">
           By optimizing your site's technical health, you protect revenue, enhance user experience, and gain a significant competitive edge.
         </p>
       </div>
-      <div class="flex-shrink-0">
+      <div class="w-full md:w-auto md:flex-shrink-0 order-1 md:order-2 mb-4 md:mb-0">
         <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
           <Image
           width={800}
@@ -309,28 +309,23 @@ const metadata = {
     </p>
 
     <!-- Process Image with Context -->
-    <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0">
-          <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
-            <Image
-          width={800}
-          height={400}
-              src={coreWebVitalsMonitor}
-              alt="Core Web Vitals monitoring dashboard displaying real-time performance metrics, mobile optimization scores, and technical health indicators"
-              class="w-48 h-32 object-cover rounded-lg"
-              width={800}
-              height={400}
-              style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
-              loading="lazy"
-              format="webp"
-            />
-          </div>
+    <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8 overflow-auto">
+      <!-- Using float layout for natural text wrapping -->
+      <div>
+        <div class="float-none md:float-left w-full md:w-48 mb-4 md:mr-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+          <Image
+            width={800}
+            height={400}
+            src={coreWebVitalsMonitor}
+            alt="Core Web Vitals monitoring dashboard displaying real-time performance metrics, mobile optimization scores, and technical health indicators"
+            class="w-full h-auto md:w-48 md:h-32 object-cover"
+            style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
+            loading="lazy"
+            format="webp"
+          />
         </div>
-        <div class="flex-1">
-          <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Comprehensive Analysis Process</h3>
-          <p class="text-white">We leave no stone unturned, providing you with a clear, actionable roadmap for remediation that addresses every critical technical factor.</p>
-        </div>
+        <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Comprehensive Analysis Process</h3>
+        <p class="text-white">We leave no stone unturned, providing you with a clear, actionable roadmap for remediation that addresses every critical technical factor.</p>
       </div>
     </div>
 
@@ -439,21 +434,16 @@ const metadata = {
     </p>
 
     <!-- Statistics with Image -->
-    <div class="flex items-start gap-6 mb-8">
-      <div class="flex-1">
-        <blockquote class="border-l-4 border-primary pl-6 py-4 my-6 bg-primary/5 rounded-r-lg">
-          <p class="text-lg text-white italic">"<a href="https://www.cloudflare.com/learning/performance/more/website-performance-conversion-rates/" class="text-primary hover:underline">On mobile, for every second delay in mobile page load, conversions can fall by up to 20% (Cloudflare, 2024)</a>, making comprehensive audits more critical than ever for maintaining competitive rankings."</p>
-          <cite class="text-primary text-sm">— Website Performance Research</cite>
-        </blockquote>
-      </div>
-      <div class="flex-shrink-0">
-        <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+    <div class="overflow-auto">
+      <!-- Using float layout for natural text wrapping -->
+      <div>
+        <div class="float-none md:float-right w-full md:w-48 mb-4 md:ml-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
           <Image
           width={800}
           height={400}
             src={seoPerformanceDashboardV4}
             alt="SEO performance monitoring dashboard showcasing ranking improvements, traffic growth analytics, and technical optimization results with real-time metrics"
-            class="w-48 h-32 object-cover rounded-lg"
+            class="w-full h-auto md:w-48 md:h-32 object-cover rounded-lg"
             width={800}
             height={400}
             style="opacity: 1 !important; filter: none !important; background: #000 !important; display: block; position: relative; z-index: 1000;"
@@ -461,6 +451,10 @@ const metadata = {
             format="webp"
           />
         </div>
+        <blockquote class="border-l-4 border-primary pl-6 py-4 my-6 bg-primary/5 rounded-r-lg">
+          <p class="text-lg text-white italic">"<a href="https://www.cloudflare.com/learning/performance/more/website-performance-conversion-rates/" class="text-primary hover:underline">On mobile, for every second delay in mobile page load, conversions can fall by up to 20% (Cloudflare, 2024)</a>, making comprehensive audits more critical than ever for maintaining competitive rankings."</p>
+          <cite class="text-primary text-sm">— Website Performance Research</cite>
+        </blockquote>
       </div>
     </div>
 

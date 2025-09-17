@@ -137,21 +137,18 @@ const meta = {
         </div>
     </div>
 
-    <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0">
-          <Image
+    <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8 overflow-auto">
+      <!-- Using float layout for natural text wrapping -->
+      <div>
+        <Image
           width={800}
           height={400}
-            src={seoWorkflowAutomation}
-            alt="Systematic local SEO workflow automation showing step-by-step optimization methodology and process management"
-            class="w-48 h-32 aspect-[3/2] object-cover rounded-lg"
-          />
-        </div>
-        <div class="flex-1">
-          <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Our Proven Workflow</h4>
-          <p class="text-white">Our methodology ensures all aspects of your local online presence are optimized for maximum visibility and customer engagement, from technical setup to ongoing management.</p>
-        </div>
+          src={seoWorkflowAutomation}
+          alt="Systematic local SEO workflow automation showing step-by-step optimization methodology and process management"
+          class="float-none md:float-left w-full md:w-48 h-auto md:h-32 aspect-[3/2] object-cover rounded-lg mb-4 md:mr-6"
+        />
+        <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Our Proven Workflow</h3>
+        <p class="text-white">Our methodology ensures all aspects of your local online presence are optimized for maximum visibility and customer engagement, from technical setup to ongoing management.</p>
       </div>
     </div>
 
@@ -224,27 +221,24 @@ const meta = {
       Local SEO strategies are versatile and can be adapted to various business models and industries. The core principle is to connect with customers in a specific geographic area, whether you're a single storefront or a multi-location enterprise.
     </p>
 
-    <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8">
-      <div class="flex items-start gap-4">
-        <div class="flex-1">
-          <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Real-World Geographic Targeting</h4>
-          <ol class="text-white space-y-2 list-disc list-inside">
-            <li><strong>Service-Area Businesses:</strong> A plumbing company can target specific neighborhoods or suburbs, ensuring they appear in "plumber near me" searches for homeowners in their operational zones.</li>
-            <li><strong>Multi-Location Retail:</strong> A coffee shop chain can create optimized location pages for each store, allowing them to capture foot traffic from searches like "coffee shop downtown."</li>
-            <li><strong>Professional Services:</strong> A law firm can optimize its Google Business Profile for practice areas like "personal injury lawyer in [City]," attracting high-value local clients.</li>
-          </ol>
-        </div>
-        <div class="flex-shrink-0">
-          <div style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
-            <Image
-          width={800}
-          height={400}
-              src={mobileSeoAnalysisInterface}
+    <div class="bg-primary/5 border border-primary/20 p-6 rounded-xl mb-8 overflow-auto">
+      <!-- Using float layout for natural text wrapping -->
+      <div>
+        <div class="float-none md:float-right w-full md:w-48 mb-4 md:ml-6" style="position: relative; z-index: 999; background: #000; padding: 0; border-radius: 8px; overflow: hidden;">
+          <Image
+            width={800}
+            height={400}
+            src={mobileSeoAnalysisInterface}
               alt="Mobile local search interface displaying geographic targeting results, local business listings, and mobile SEO performance analytics"
-              class="w-48 h-32 aspect-[3/2] object-cover rounded-lg"
+              class="w-full h-auto md:w-48 md:h-32 aspect-[3/2] object-cover"
             />
-          </div>
         </div>
+        <h3 class="text-xl font-orbitron font-bold text-primary mb-4">Real-World Geographic Targeting</h3>
+        <ol class="text-white space-y-2 list-disc list-inside">
+          <li><strong>Service-Area Businesses:</strong> A plumbing company can target specific neighborhoods or suburbs, ensuring they appear in "plumber near me" searches for homeowners in their operational zones.</li>
+          <li><strong>Multi-Location Retail:</strong> A coffee shop chain can create optimized location pages for each store, allowing them to capture foot traffic from searches like "coffee shop downtown."</li>
+          <li><strong>Professional Services:</strong> A law firm can optimize its Google Business Profile for practice areas like "personal injury lawyer in [City]," attracting high-value local clients.</li>
+        </ol>
       </div>
     </div>
 
